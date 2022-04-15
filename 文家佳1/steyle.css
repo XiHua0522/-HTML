@@ -95,6 +95,7 @@ li{
     list-style: none;
 }
 .box{
+    padding：200px
     width: 1000px;
     height: 500px;
     margin:  auto;
@@ -104,7 +105,7 @@ li{
 .box li{
     float:left;
     position:relative;
-     width: 150px;
+     width: 100px;
      height: 300px;
     transition: all 0.3s;
 }
