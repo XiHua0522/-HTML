@@ -95,7 +95,9 @@ li{
     list-style: none;
 }
 .box{
-    padding: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
     width: 947px;
     height: 927px;
     margin:  auto;
