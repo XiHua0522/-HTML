@@ -24,7 +24,7 @@
 .indexImg {
     width: 100vw;
     height: 100vh;
-    background: rgba(116, 112, 112, 0.521);
+    background:linear-gradient(200deg,#005bea,#00c6fb);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -90,12 +90,12 @@
     margin: 0 auto;
     margin-top: 1vh;
 }
-li{
+/* 这里是百叶窗的css */
+/* li{
     list-style: none;
 }
 .box{
-    transform: translate(850px);
-    position:absolute;
+    position:center;
     width: 220px;
     height: 680px;
     transition: all 0.3s;
@@ -141,5 +141,12 @@ li{
   .box-shadow {
     -webkit-box-shadow: 0 0.25rem 1rem rgba(48, 55, 66, 0.15);
     box-shadow: 0 4px 16px rgba(48, 55, 66, 0.15);
+  } */
+  #plane{
+      color: #000;
+      font-size: 50px;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
   }
-  
