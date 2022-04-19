@@ -6,13 +6,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>一个小网页</title>
   <link rel="stylesheet" href="./wenjiajia1/steyle.css">
+  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body>
+  <div id="plane">
+    <i class="fa fa-paper-plane" aria-hidden="true"></i>
+  </div>  
+  <script>
+    let plane=document.getElementById("plane")
+    let deg=0,ex=0,ey=0,vx=0,vy=0,count=0;
+    window.addEventListener('mousemove',(e)=>{
+      ex=e.x-plane.offsetLeft-plane.clientWidth/2;
+      ey=e.y-plane.offsetTop-plane.clientHeight/2;
+      deg=360*Math.atan(ey/ex)/(2*Math.PI)+45;
+      if(ex<0){
+        deg+=180;
+      }
+    })
+    function draw(){
+      plane.style.transform='rotate('+deg+'deg)';
+      if(count<100){
+        vx+=ex/100;
+        vy+=ey/100;
+      }
+      plane.style.left=vx+'px';
+      plane.style.top=vy+'px';
+    }
+    setInterval(draw,1);
+  </script>
   <div class="swithDivContain">
     <div class="indexImg">
       <p class="seeMore">↓ 向下滑动以继续 ↓</p>
-      <ul class="box">
+      <!-- 这里是百叶窗，做的太烂了暂时不要 -->
+      <!-- <ul class="box">
         
         <li class="card">
           <img src="./wenjiajia1/1.jpg" width="200" height="300">
@@ -31,14 +58,14 @@
           <div class="text">XiHua</div>
         </li>
       </ul>
-      <video src="./wenjiajia1/197.mp3" autoplay="true" hidden="true"></video>
+      <video src="./wenjiajia1/197.mp3" autoplay="true" hidden="true"></video> -->
     </div>
     <div class="showMe">
       <touxianglan class="xiangkuang"><img class="headImg" src="./wenjiajia1/123.png" width="236" height="241.25">
-      </touxianglan>
+      </touxianglan><br>
       <div style="text-align:center;">
         <div style="color:rgb(233, 129, 129)">
-          <p>试试在下面的框里输入些什么</p>
+          <p>试试在下面的框里输入些什么</p><br>
         </div>
         <input><br><br>
         <audio src="./wenjiajia1/556.mp3" controls="true"></audio>
