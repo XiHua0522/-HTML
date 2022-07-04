@@ -35,9 +35,33 @@
       plane.style.top=vy+'px';
     }
     setInterval(draw,1);
-  </script>
+</script>
   <div class="swithDivContain bianju">
     <div class="indexImg">
+      <div id="div1">
+  </div>
+        <!-- 显示实时时间 -->
+        <div class="box"></div>
+        <script>
+            function getTime() {
+                var date = new Date();
+                var year = date.getFullYear(); //获取年份
+                var month = date.getMonth() + 1; //获取月份
+                var day = date.getDate(); //获取日期
+                var hour = date.getHours(); //获取小时
+                hour = hour < 10 ? '0' + hour : hour;
+                var minute = date.getMinutes(); // 获取分
+                minute = minute < 10 ? '0' + minute : minute;
+                var seconds = date.getSeconds(); //获取秒
+                seconds = seconds < 10 ? '0' + seconds : seconds;
+                return year + '年' + month + '月' + day + '日&nbsp;' + hour + ':' + minute + ':' + seconds;
+            }
+     
+            setInterval(function() {
+                document.querySelector('.box').innerHTML = getTime();
+            }, 1000)
+        </script>
+    
       <!-- <p class="seeMore">↓ 向下滑动以继续 ↓</p> -->
       <!-- 下面是百叶窗，太烂了暂时不要后面改 -->
       <!-- <ul class="box">
@@ -56,8 +80,8 @@
         </li>
       </ul> -->
       <!-- 背景音乐 -->
-      <video src="./wenjiajia1/197.mp3" autoplay="true" hidden="true"></video>
-    </div>
+      <!-- <video src="./wenjiajia1/197.mp3" autoplay="true" hidden="true"></video>
+    </div> -->
       <!-- 以下是个人主页 -->
     <!-- <div class="showMe bianju">
       <touxianglan class="xiangkuang"><img class="headImg" src="./wenjiajia1/123.png" width="236" height="241.25">
@@ -77,7 +101,7 @@
             <img src="./wenjiajia1/455.gif" alt="hhh"></a><br>
           <p><b>↑点击打开↑</b></p><br>
         </div> -->
-        <script src="./wenjiajia1/main.js"></script>
+        <!-- <script src="./wenjiajia1/main.js"></script> -->
 </body>
 
 </html>
