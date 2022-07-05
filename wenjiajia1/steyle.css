@@ -13,25 +13,14 @@
     align-items: center;
 }
 
-/* 上半部分（蓝色背景部分） */
-  .container {
-    display: flex;
-    overflow-x: scroll;
-  }
-  .swithDivContain {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-}
 .gradientBG {
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(-45deg, #ee7752, #e73cbc, #23a6d5, #23d5ab);
+    background: linear-gradient(90deg, #59C173,#A17FE0,#5d26c1);
     background-size: 600% 600%;
     animation: gradientBG 10s ease infinite;
     background-repeat: no-repeat;
     background-position: center center;
-    /* transition: all 1s; */
 }
 /* 动画，控制背景 background-position */
   @keyframes gradientBG {
@@ -45,50 +34,7 @@
 		background-position: 0% 50%;
 	}
   }
-.indexImgMoveup {
 
-    transform: translateY(-100vh);
-}
-
-@keyframes breath {
-    0% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-/* 头像部分 */
-.xiangkuang{
-    width: 100%;
-    height: 300px;
-    background: #eee;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-/* 下半部分 */
-.seeMore {
-    width: 100%;
-    position: absolute;
-    text-align: center;
-    bottom: 5vh;
-    color: rgb(255, 255, 255);
-    animation: breath 2s ease-in-out infinite;
-}
-.showMe {
-    width: 100vw;
-    height: 100vh;
-    transition: all 1s;
-}
-.showMeMoveup {
-    transform: translateY(-100vh);
-}
 @keyframes rotate360 {
     from {
         transform: rotate(0);
@@ -105,7 +51,7 @@
     border-radius: 50%;
     box-shadow: 3px 3px 10px rgb(185, 185, 185);
     background-size: contain;
-    animation: rotate360 10s linear infinite;
+    animation: rotate360 60s linear infinite;
     margin: 0 auto;
     margin-top: 1vh;
 }
