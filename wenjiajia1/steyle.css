@@ -16,7 +16,7 @@
 .gradientBG {
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(90deg, #59C173,#A17FE0,#5d26c1);
+    background: linear-gradient(90deg, #59C173,#7f91e0,#7d64b8,#2a75ff);
     background-size: 600% 600%;
     animation: gradientBG 10s ease infinite;
     background-repeat: no-repeat;
