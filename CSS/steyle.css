@@ -173,8 +173,9 @@ a:hover:after {
 .txt {
     width: auto;
     height: auto;
+    text-align: center;
+    font-size: 25px;
 }
-
 .content {
     margin: 0 auto;
     width: 80%;
