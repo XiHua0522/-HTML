@@ -176,6 +176,7 @@ a:hover:after {
     text-align: center;
     font-size: 25px;
 }
+
 .content {
     margin: 0 auto;
     width: 80%;
@@ -185,5 +186,4 @@ a:hover:after {
     background-size: contain;
 
 }
-
 @media (max-width:600px) {}
