@@ -4,76 +4,50 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>一个小网页</title>
-  <link rel="stylesheet" href="./wenjiajia1/steyle.css">
-  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <title>Elise的个人博客</title>
+  <link rel="stylesheet" href="./CSS/steyle.css">
+  <script src="./script/main.js"></script>
 </head>
 
 <body>
-  <!-- 始终跟随鼠标的小飞机 -->
-  <div id="plane">
-    <i class="fa fa-paper-plane" aria-hidden="true"></i>
-  </div>  
-  <script>
-    let plane=document.getElementById("plane")
-    let deg=0,ex=0,ey=0,vx=0,vy=0,count=0;
-    window.addEventListener('mousemove',(e)=>{
-      ex=e.x-plane.offsetLeft-plane.clientWidth/2;
-      ey=e.y-plane.offsetTop-plane.clientHeight/2;
-      deg=360*Math.atan(ey/ex)/(2*Math.PI)+45;
-      if(ex<0){
-        deg+=180;
-      }
-    })
-    function draw(){
-      plane.style.transform='rotate('+deg+'deg)';
-      if(count<100){
-        vx+=ex/100;
-        vy+=ey/100;
-      }
-      plane.style.left=vx+'px';
-      plane.style.top=vy+'px';
-    }
-    setInterval(draw,1);
-</script>
-    <div class="gradientBG">  
-      <div style="text-align: center;">
-        <a href="https://xihua0522.github.io/RapeSenpai/">
-       <img class="headImg" src="./wenjiajia1/123.png"></a>
+  <div>
+    <!-- 背景 -->
+    <div class="BG">
+      <!-- 顶部栏 -->
+      <div id="nav" class="top" style="z-index: 1;">
+          <ul >
+              <li><a href="/">首页</a></li>
+              <li><a href="https://github.com/XiHua0522">GitHub</a></li>
+              <li><a href="#">友链</a></li>
+              <li><a href="#">联系我</a></li>
+              <li><a href="#">学习</a></li>
+              <li>
+                <a href="#">小游戏</a>
+                <ul>
+                  <li><a href="https://xihua0522.github.io/RapeSenpai/">暴击只因</a></li>
+                  <li><a href="#">无</a></li>
+          </ul>
+          </li>
+          </ul>
+      </div></br>
+      <!-- 粒子点击特效 -->
+      <canvas class="fireworks" style="position:fixed;left:0;top:0;z-index:99999999;pointer-events:none;"></canvas>
+      <script type="text/javascript" src="./script/djtx.js"></script>
+      <!-- 介绍 -->
+      <div class="introduce">
+        <div style="text-align: center;">
+          <img class="headImg" src="./assets/img/logo.jpg"></a>
+          <p class="title">Elise的个人博客</p>
+        </div>
+      </div>
+    </div></br>
+    <!-- 内容区 -->
+    <div class="document">
+      <div class="content">
+        <p>这里暂时还什么都没有，过两天再来看吧 (●′ω`●) </p>
+      </div>
     </div>
-    <div style="text-align:center;font-size: 20px;">现在的时间是</div>
-      <div id="div1">
   </div>
-        <!-- 显示实时时间 -->
-        <div class="box"></div>
-        <script>
-            function getTime() {
-                var date = new Date();
-                var year = date.getFullYear(); //获取年份
-                var month = date.getMonth() + 1; //获取月份
-                var day = date.getDate(); //获取日期
-                var hour = date.getHours(); //获取小时
-                hour = hour < 10 ? '0' + hour : hour;
-                var minute = date.getMinutes(); // 获取分
-                minute = minute < 10 ? '0' + minute : minute;
-                var seconds = date.getSeconds(); //获取秒
-                seconds = seconds < 10 ? '0' + seconds : seconds;
-                return year + '年' + month + '月' + day + '日&nbsp;' + hour + ':' + minute + ':' + seconds;
-            }
-     
-            setInterval(function() {
-                document.querySelector('.box').innerHTML = getTime();
-            }, 1000)
-        </script>
-              <div style="text-align:center;font-size: 20px;">
-                <a href="https://github.com/XiHua0522/2333">
-                    <p>源码</p>
-                </a></div>
-                <div style="text-align:center;font-size: 30px;">
-                  <a href="./wenjiajia1/564.mp4">
-                    <p>点我送地狱火</p>     
-                  </a>
-                </div>        
 </body>
 
 </html>
